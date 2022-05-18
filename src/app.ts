@@ -1,4 +1,5 @@
-// const { token } = require("./token.js");
+
+const { token } = require("./token.js");
 const shell = require('shelljs')
 const argv = require('yargs')
     .usage('Usage: git-create-repo')
@@ -20,5 +21,5 @@ const argv = require('yargs')
     })
     .argv
 
-const curl = `curl -i -u lebrancconvas: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 https://api.github.com/users/lebrancconvas && curl -u '${argv.u}' https://api.github.com/user/repos -d "{\\\"name\\\":\\\"${argv.repo}\\\",\\\"private\\\":${argv.private === undefined ? false : true}}"`
+const curl = `curl -i -u lebrancconvas:${token} https://api.github.com/users/lebrancconvas && curl -u '${argv.u}' https://api.github.com/user/repos -d "{\\\"name\\\":\\\"${argv.repo}\\\",\\\"private\\\":${argv.private === undefined ? false : true}}"`
 shell.exec(curl)

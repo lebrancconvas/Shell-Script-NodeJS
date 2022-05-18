@@ -1,19 +1,9 @@
 {
-    "name": "shnodejs",
-    "version": "1.0.0",
-    "main": "index.js",
-    "repository": "https://github.com/lebrancconvas/Shell-Script-NodeJS.git",
-    "author": "lebrancconvas <lebrancconvas@gmail.com>",
-    "license": "MIT",
-    "dependencies": {
-        "shelljs": "^0.8.5",
-        "yargs": "^17.5.1"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.16"
-    },
-    "scripts": {
-        "start": "node index.js",
-        "dev": "nodemon index.js"
-    }
+  "dependencies": {
+    "shelljs": "^0.8.5",
+    "yargs": "^17.5.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.34"
+  }
 }
